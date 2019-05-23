@@ -1,0 +1,16 @@
+python value_iteration.py medium_maze.txt value_output.txt q_value_output.txt policy_output.txt 5 0.9
+python environment.py medium_maze.txt output.feedback medium_maze_action_seq.txt
+python q_learning.py medium_maze.txt value_output.txt q_value_output.txt policy_output.txt 1000 20 0.8 0.9 0
+
+python value_iteration.py medium_maze.txt value_output.txt q_value_output.txt policy_output.txt 5 0.9
+python environment.py medium_maze.txt output.feedback medium_maze_action_seq.txt
+python q_learning.py medium_maze.txt value_output.txt q_value_output.txt policy_output.txt 1000 20 0.8 0.9 0.05
+
+
+tar -cvf rl.tar environment.py value_iteration.py q_learning.py python3.txt
+
+# Empirical questions
+
+python value_iteration.py maze1.txt value_output.txt q_value_output.txt policy_output.txt 100 0.9
+python q_learning.py maze2.txt value_output.txt q_value_output.txt policy_output.txt 2000 2000 0.1 0.9 0.8
+
